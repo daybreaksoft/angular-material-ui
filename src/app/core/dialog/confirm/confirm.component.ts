@@ -1,9 +1,10 @@
-import { Component, Inject, Input } from '@angular/core';
+import { Component, Inject, Input, ChangeDetectionStrategy } from '@angular/core';
 import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material';
 
 @Component({
-    selector: 'vr-dialog-confirm',
+    selector: 'dbs-dialog-confirm',
     templateUrl: 'confirm.component.html',
+    changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class ConfirmDialog {
 

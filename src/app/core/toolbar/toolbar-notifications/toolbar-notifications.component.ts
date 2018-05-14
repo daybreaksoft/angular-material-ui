@@ -1,11 +1,12 @@
-import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
+import { ChangeDetectorRef, Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
 import { LIST_FADE_ANIMATION } from '../../utils/list.animation';
 
 @Component({
-  selector: 'vr-toolbar-notifications',
+  selector: 'dbs-toolbar-notifications',
   templateUrl: './toolbar-notifications.component.html',
   styleUrls: ['./toolbar-notifications.component.scss'],
-  animations: [...LIST_FADE_ANIMATION]
+  animations: [...LIST_FADE_ANIMATION],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class ToolbarNotificationsComponent implements OnInit {
 

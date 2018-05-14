@@ -1,12 +1,13 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnInit, ChangeDetectionStrategy } from '@angular/core';
 import { SidenavItem } from './sidenav-item.model';
 import * as fromRoot from '../../../reducers/index';
 import * as sidenavAction from '../shared/sidenav.action';
 import { Store } from '@ngrx/store';
 
 @Component({
-  selector: 'vr-sidenav-item',
-  templateUrl: './sidenav-item.component.html'
+  selector: 'dbs-sidenav-item',
+  templateUrl: './sidenav-item.component.html',
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class SidenavItemComponent implements OnInit {
 

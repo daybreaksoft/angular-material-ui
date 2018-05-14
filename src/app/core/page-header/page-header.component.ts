@@ -1,8 +1,9 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnInit, ChangeDetectionStrategy } from '@angular/core';
 
 @Component({
-  selector: 'vr-page-header',
-  templateUrl: './page-header.component.html'
+  selector: 'dbs-page-header',
+  templateUrl: './page-header.component.html',
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class PageHeaderComponent implements OnInit {
 

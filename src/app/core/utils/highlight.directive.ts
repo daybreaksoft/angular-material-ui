@@ -8,7 +8,7 @@ import { isPlatformBrowser } from '@angular/common'; // XML includes HTML syntax
 
 
 @Directive({
-  selector: '[vrHighlight]'
+  selector: '[dbs-highlight]'
 })
 export class HighlightDirective implements AfterViewInit {
 

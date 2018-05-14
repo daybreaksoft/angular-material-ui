@@ -1,9 +1,10 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnInit, ChangeDetectionStrategy } from '@angular/core';
 import { SidenavItem } from '../../../sidenav/sidenav-item/sidenav-item.model';
 
 @Component({
-  selector: 'vr-toolbar-navigation-item',
-  templateUrl: './toolbar-navigation-item.component.html'
+  selector: 'dbs-toolbar-navigation-item',
+  templateUrl: './toolbar-navigation-item.component.html',
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class ToolbarNavigationItemComponent implements OnInit {
 

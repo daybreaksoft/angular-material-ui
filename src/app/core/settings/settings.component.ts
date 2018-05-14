@@ -1,4 +1,4 @@
-import { Component, OnDestroy, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit, ChangeDetectionStrategy } from '@angular/core';
 import { Store } from '@ngrx/store';
 import * as fromRoot from '../../reducers/index';
 import * as layout from '../layout/shared/layout.action';
@@ -7,8 +7,9 @@ import 'rxjs/add/operator/takeUntil';
 import { componentDestroyed } from '../utils/component-destroyed';
 
 @Component({
-  selector: 'vr-settings',
-  templateUrl: './settings.component.html'
+  selector: 'dbs-settings',
+  templateUrl: './settings.component.html',
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class SettingsComponent implements OnInit, OnDestroy {
 

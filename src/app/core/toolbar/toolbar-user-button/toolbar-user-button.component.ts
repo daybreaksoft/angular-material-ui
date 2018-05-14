@@ -2,7 +2,7 @@ import { AfterViewInit, Component, OnInit } from '@angular/core';
 import { DefaultLayoutService, ToolbarUserButtonOptions } from '../../layout/layout.settings';
 
 @Component({
-  selector: 'vr-toolbar-user-button',
+  selector: 'dbs-toolbar-user-button',
   templateUrl: './toolbar-user-button.component.html',
   styleUrls: ['./toolbar-user-button.component.scss']
 })

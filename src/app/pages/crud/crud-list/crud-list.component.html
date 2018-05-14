@@ -1,5 +1,5 @@
-<vr-page-container pageName="CRUD List">
-  <vr-table-container name="Customers" [isLoadingResults]="isLoadingResults">
+<dbs-page-container pageName="CRUD List">
+  <dbs-table-container name="Customers" [isLoadingResults]="isLoadingResults">
     <header>
       <button class="create" type="button" mat-mini-fab color="primary">
         <mat-icon>add</mat-icon>
@@ -56,5 +56,5 @@
       <mat-paginator #paginator [pageSize]="pagingOptions.pageSize" [pageSizeOptions]="pagingOptions.pageSizeOptions" [showFirstLastButtons]="pagingOptions.showFirstLastButtons">
       </mat-paginator>
     </footer>
-  </vr-table-container>
-</vr-page-container>
+  </dbs-table-container>
+</dbs-page-container>

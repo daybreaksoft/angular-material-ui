@@ -3,7 +3,7 @@ import * as CountUp from 'countup.js';
 import { isPlatformBrowser } from '@angular/common';
 
 @Directive({
-  selector: '[vrCountUp]'
+  selector: '[dbs-countUp]'
 })
 export class CountUpDirective implements OnInit {
 
@@ -12,7 +12,7 @@ export class CountUpDirective implements OnInit {
    * Optional extra configuration, such as easing.
    */
   // noinspection TsLint
-  @Input('vrCountUp') options: any;
+  @Input('dbs-countUp') options: any;
 
   /**
    * Optional start value for the count. Defaults to zero.
@@ -83,7 +83,7 @@ export class CountUpDirective implements OnInit {
   //noinspection TsLint
   private _countUp;
 
-  constructor(@Inject(ElementRef) private el: ElementRef, @Inject(PLATFORM_ID) private platformId: any) {}
+  constructor(@Inject(ElementRef) private el: ElementRef, @Inject(PLATFORM_ID) private platformId: any) { }
 
   private createCountUp(sta, end, dec, dur) {
     if (isPlatformBrowser(this.platformId)) {

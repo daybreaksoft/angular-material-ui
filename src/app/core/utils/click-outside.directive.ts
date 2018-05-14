@@ -1,12 +1,12 @@
 import { Directive, ElementRef, EventEmitter, HostListener, Output } from '@angular/core';
 
 @Directive({
-  selector: '[vrClickOutside]'
+  selector: '[dbs-click-outside]'
 })
 export class ClickOutsideDirective {
 
-  @Output()
-  public vrClickOutside = new EventEmitter<any>();
+  @Output('dbs-click-outside')
+  public clickOutside = new EventEmitter<any>();
 
   constructor(private _elementRef: ElementRef) {
   }
@@ -19,7 +19,7 @@ export class ClickOutsideDirective {
     const clickedInside = this._elementRef.nativeElement.contains(targetElement);
 
     if (!clickedInside) {
-      this.vrClickOutside.emit(event);
+      this.clickOutside.emit(event);
     }
   }
 

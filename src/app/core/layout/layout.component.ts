@@ -43,8 +43,7 @@ export class LayoutComponent implements OnInit, OnDestroy {
   constructor(
     private mediaReplayService: MediaReplayService,
     private router: Router,
-    private store: Store<fromRoot.State>,
-    private cd: ChangeDetectorRef
+    private store: Store<fromRoot.State>
   ) { }
 
   ngOnInit() {
@@ -61,7 +60,6 @@ export class LayoutComponent implements OnInit, OnDestroy {
     // Layout
     this.store.select(fromRoot.getLayout).subscribe((selectedLayout) => {
       this.layout = selectedLayout;
-      this.cd.markForCheck();
     });
     // /Layout
 
@@ -69,7 +67,6 @@ export class LayoutComponent implements OnInit, OnDestroy {
       const isMobile = (change.mqAlias === 'xs') || (change.mqAlias === 'sm');
 
       this.isMobile = isMobile;
-      this.cd.markForCheck();
 
       if (isMobile || this.layout === 'gamma') {
         this.closeSidenav();

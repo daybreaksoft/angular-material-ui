@@ -1,4 +1,4 @@
-<div class="toolbar-button" fxLayout="row" fxLayoutAlign="start center" (vrClickOutside)="onClickOutside()">
+<div class="toolbar-button" fxLayout="row" fxLayoutAlign="start center" (dbs-click-outside)="onClickOutside()">
   <button class="icon-button" type="button" mat-button (click)="toggleDropdown()" [class.open]="isOpen">
     <mat-icon class="icon">notifications_active</mat-icon>
   </button>
@@ -14,11 +14,10 @@
           <mat-icon class="icon">settings</mat-icon>
         </button>
       </div>
-      <vr-scrollbar class="content">
+      <dbs-scrollbar class="content">
         <div *ngFor="let notification of notifications; let last = last" fxLayout="column" [@listFade]="true">
-          <div class="notification" (click)="markAsRead(notification)"
-               [ngClass]="notification.colorClass" [class.read]="notification.read"
-               fxLayout="row" fxLayoutAlign="start center" matRipple>
+          <div class="notification" (click)="markAsRead(notification)" [ngClass]="notification.colorClass" [class.read]="notification.read"
+            fxLayout="row" fxLayoutAlign="start center" matRipple>
             <mat-icon class="icon">{{ notification.icon }}</mat-icon>
             <div class="title" fxLayout="column">
               <div class="name">{{ notification.name }}</div>
@@ -34,7 +33,7 @@
         <div class="no-notifications" *ngIf="notifications.length === 0" [@listFade]="true">
           All fine! No notifications right now.
         </div>
-      </vr-scrollbar>
+      </dbs-scrollbar>
       <div class="footer" fxLayout="row" fxLayoutAlign="center center">
         <div class="action">Mark all as read</div>
       </div>

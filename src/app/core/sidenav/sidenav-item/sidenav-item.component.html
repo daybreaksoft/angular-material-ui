@@ -1,10 +1,8 @@
 <div *ngIf="item.routeIsFunction(); then function else route"></div>
 
 <ng-template #function>
-  <a class="sidenav-item" [class.open]="isOpen(item)" matRipple
-     (click)="item.route"
-     fxLayout="row" fxLayoutAlign="start center"
-     *ngIf="!item.hasSubItems()">
+  <a class="sidenav-item" [class.open]="isOpen(item)" matRipple (click)="item.route" fxLayout="row" fxLayoutAlign="start center"
+    *ngIf="!item.hasSubItems()">
 
     <span class="name">{{ item.name }}</span>
     <span fxFlex></span>
@@ -15,10 +13,8 @@
 </ng-template>
 
 <ng-template #route>
-  <a class="sidenav-item" [class.open]="isOpen(item)" matRipple
-     [routerLink]="item.route" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}"
-     fxLayout="row" fxLayoutAlign="start center"
-     *ngIf="!item.hasSubItems()">
+  <a class="sidenav-item" [class.open]="isOpen(item)" matRipple [routerLink]="item.route" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}"
+    fxLayout="row" fxLayoutAlign="start center" *ngIf="!item.hasSubItems()">
 
     <span class="name">{{ item.name }}</span>
     <span fxFlex></span>
@@ -27,10 +23,8 @@
   </a>
 </ng-template>
 
-<a class="sidenav-item" [class.open]="isOpen(item)" matRipple
-   (click)="toggleDropdown()"
-   fxLayout="row" fxLayoutAlign="start center"
-   *ngIf="item.hasSubItems()">
+<a class="sidenav-item" [class.open]="isOpen(item)" matRipple (click)="toggleDropdown()" fxLayout="row" fxLayoutAlign="start center"
+  *ngIf="item.hasSubItems()">
 
   <span class="name">{{ item.name }}</span>
   <span fxFlex></span>
@@ -40,5 +34,5 @@
 </a>
 
 <div class="sub-menu" [style.height]="getSubMenuHeight()">
-  <vr-sidenav-item class="sidenav-item-container" *ngFor="let subItem of item.subItems" [item]="subItem" [currentlyOpen]="currentlyOpen"></vr-sidenav-item>
+  <dbs-sidenav-item class="sidenav-item-container" *ngFor="let subItem of item.subItems" [item]="subItem" [currentlyOpen]="currentlyOpen"></dbs-sidenav-item>
 </div>

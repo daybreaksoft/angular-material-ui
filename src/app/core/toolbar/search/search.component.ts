@@ -1,10 +1,11 @@
-import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { Component, ElementRef, OnInit, ViewChild, ChangeDetectionStrategy } from '@angular/core';
 import { MatFormField } from '@angular/material';
 
 @Component({
-  selector: 'vr-search',
+  selector: 'dbs-search',
   templateUrl: './search.component.html',
-  styleUrls: ['./search.component.scss']
+  styleUrls: ['./search.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class SearchComponent implements OnInit {
 

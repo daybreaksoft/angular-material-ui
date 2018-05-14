@@ -1,10 +1,11 @@
-import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output, ChangeDetectionStrategy } from '@angular/core';
 import { DefaultLayoutService, LayoutOptions } from '../../layout/layout.settings';
 
 @Component({
-  selector: 'vr-toolbar-alpha',
+  selector: 'dbs-toolbar-alpha',
   templateUrl: './toolbar-alpha.component.html',
-  styleUrls: ['./toolbar-alpha.component.scss']
+  styleUrls: ['./toolbar-alpha.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class ToolbarAlphaComponent implements OnInit {
 
@@ -17,7 +18,7 @@ export class ToolbarAlphaComponent implements OnInit {
 
   constructor(layout: DefaultLayoutService) {
     this.options = layout.options;
-   }
+  }
 
   ngOnInit() { }
 

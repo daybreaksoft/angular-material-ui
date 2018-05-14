@@ -1,9 +1,10 @@
-import { Component, ElementRef, EventEmitter, Input, OnInit, Output, ViewChild, ViewEncapsulation } from '@angular/core';
+import { Component, ElementRef, EventEmitter, Input, OnInit, Output, ViewChild, ViewEncapsulation, ChangeDetectionStrategy } from '@angular/core';
 
 @Component({
-  selector: 'vr-table-container',
+  selector: 'dbs-table-container',
   templateUrl: './table-container.component.html',
-  encapsulation: ViewEncapsulation.None
+  encapsulation: ViewEncapsulation.None,
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class TableContainerComponent implements OnInit {
 

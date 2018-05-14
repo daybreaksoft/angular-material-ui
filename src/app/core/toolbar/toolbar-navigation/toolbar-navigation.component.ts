@@ -1,4 +1,4 @@
-import { Component, OnDestroy, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit, ChangeDetectionStrategy } from '@angular/core';
 import { Observable } from 'rxjs/Observable';
 import { Subscription } from 'rxjs/Subscription';
 import { NavigationEnd, Router } from '@angular/router';
@@ -8,9 +8,10 @@ import { SidenavItem } from '../../sidenav/sidenav-item/sidenav-item.model';
 import { SetCurrentlyOpenByRouteAction } from '../../sidenav/shared/sidenav.action';
 
 @Component({
-  selector: 'vr-toolbar-navigation',
+  selector: 'dbs-toolbar-navigation',
   templateUrl: './toolbar-navigation.component.html',
-  styleUrls: ['./toolbar-navigation.component.scss']
+  styleUrls: ['./toolbar-navigation.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class ToolbarNavigationComponent implements OnInit, OnDestroy {
 

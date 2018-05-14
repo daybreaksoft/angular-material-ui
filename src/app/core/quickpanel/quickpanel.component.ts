@@ -1,8 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
 
 @Component({
-  selector: 'vr-quickpanel',
-  templateUrl: './quickpanel.component.html'
+  selector: 'dbs-quickpanel',
+  templateUrl: './quickpanel.component.html',
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class QuickpanelComponent implements OnInit {
 

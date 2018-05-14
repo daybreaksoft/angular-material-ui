@@ -9,7 +9,7 @@ import { SelectLayoutAction, SetCardElevationAction } from '../layout/shared/lay
 import { DefaultLayoutService } from '../layout/layout.settings';
 
 @Component({
-  selector: 'vr-route-handler',
+  selector: 'dbs-route-handler',
   templateUrl: './route-handler.component.html'
 })
 export class RouteHandlerComponent implements OnInit {

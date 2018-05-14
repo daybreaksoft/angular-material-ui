@@ -1,7 +1,7 @@
 import { Component, Input, OnInit, ChangeDetectorRef } from '@angular/core';
 
 @Component({
-    selector: 'vr-page-container',
+    selector: 'dbs-page-container',
     templateUrl: './page-container.component.html'
 })
 export class PageContainerComponent implements OnInit {

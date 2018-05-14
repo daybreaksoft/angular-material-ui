@@ -1,13 +1,7 @@
-<div class="search-wrapper" fxLayout="row" [ngClass]="{ 'focus': focused, 'has-input': input }" fxFlex (vrClickOutside)="closeDropdown()">
+<div class="search-wrapper" fxLayout="row" [ngClass]="{ 'focus': focused, 'has-input': input }" fxFlex (dbs-click-outside)="closeDropdown()">
   <mat-icon class="search-icon">search</mat-icon>
-  <input type="search"
-         autocomplete="off"
-         spellcheck="false"
-         class="search-input"
-         [(ngModel)]="input"
-         (focus)="openDropdown()"
-         placeholder="Search..."
-         #inputElem>
+  <input type="search" autocomplete="off" spellcheck="false" class="search-input" [(ngModel)]="input" (focus)="openDropdown()"
+    placeholder="Search..." #inputElem>
 
   <div class="search-dropdown mat-elevation-z1">
     <div class="content results" *ngIf="input" fxLayout="column">

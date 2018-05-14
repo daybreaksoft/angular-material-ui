@@ -1,4 +1,4 @@
-import { ChangeDetectorRef, Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { ChangeDetectorRef, Component, ElementRef, OnInit, ViewChild, ChangeDetectionStrategy } from '@angular/core';
 import { SidenavItem } from '../../sidenav/sidenav-item/sidenav-item.model';
 import { NavigationEnd, Router } from '@angular/router';
 import { Store } from '@ngrx/store';
@@ -12,9 +12,10 @@ import 'rxjs/add/operator/distinctUntilChanged';
 import 'rxjs/add/operator/filter';
 
 @Component({
-  selector: 'vr-search-bar',
+  selector: 'dbs-search-bar',
   templateUrl: './search-bar.component.html',
-  styleUrls: ['./search-bar.component.scss']
+  styleUrls: ['./search-bar.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class SearchBarComponent implements OnInit {
 
@@ -23,10 +24,10 @@ export class SearchBarComponent implements OnInit {
   @ViewChild('inputElem') inputElem: ElementRef;
   focused: boolean;
 
-  recentlyVisited: SidenavItem[] = [ ];
-  frequentlyVisited: SidenavItem[] = [ ];
-  sidenavItems: SidenavItem[] = [ ];
-  searchResult: SidenavItem[] = [ ];
+  recentlyVisited: SidenavItem[] = [];
+  frequentlyVisited: SidenavItem[] = [];
+  sidenavItems: SidenavItem[] = [];
+  searchResult: SidenavItem[] = [];
 
   constructor(
     private router: Router,

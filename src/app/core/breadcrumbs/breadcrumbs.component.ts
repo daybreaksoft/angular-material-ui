@@ -1,8 +1,9 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnInit, ChangeDetectionStrategy } from '@angular/core';
 
 @Component({
-  selector: 'vr-breadcrumbs',
-  templateUrl: './breadcrumbs.component.html'
+  selector: 'dbs-breadcrumbs',
+  templateUrl: './breadcrumbs.component.html',
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class BreadcrumbsComponent implements OnInit {
 

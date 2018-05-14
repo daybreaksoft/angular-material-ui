@@ -1,9 +1,10 @@
-import { Component, Inject } from '@angular/core';
+import { Component, Inject, ChangeDetectionStrategy } from '@angular/core';
 import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material';
 
 @Component({
-    selector: 'vr-dialog-alert',
+    selector: 'dbs-dialog-alert',
     templateUrl: 'alert.component.html',
+    changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class AlertDialog {
 

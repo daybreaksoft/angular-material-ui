@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Input, OnDestroy, OnInit, Output } from '@angular/core';
+import { Component, EventEmitter, Input, OnDestroy, OnInit, Output, ChangeDetectionStrategy } from '@angular/core';
 import { SidenavItem } from './sidenav-item/sidenav-item.model';
 import { Observable } from 'rxjs/Observable';
 import * as fromRoot from '../../reducers/index';
@@ -6,8 +6,9 @@ import { Store } from '@ngrx/store';
 import { DefaultLayoutService, LayoutOptions } from '../layout/layout.settings';
 
 @Component({
-  selector: 'vr-sidenav',
-  templateUrl: './sidenav.component.html'
+  selector: 'dbs-sidenav',
+  templateUrl: './sidenav.component.html',
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class SidenavComponent implements OnInit, OnDestroy {
 

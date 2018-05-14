@@ -1,17 +1,18 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnInit, ChangeDetectionStrategy } from '@angular/core';
 import { SidenavItem } from '../../../../sidenav/sidenav-item/sidenav-item.model';
 import { Store } from '@ngrx/store';
 import { ToggleOpenSidenavItemAction } from '../../../../sidenav/shared/sidenav.action';
 import * as fromRoot from '../../../../../reducers/index';
 
 @Component({
-  selector: 'vr-toolbar-navigation-dropdown-item',
-  templateUrl: './toolbar-navigation-dropdown-item.component.html'
+  selector: 'dbs-toolbar-navigation-dropdown-item',
+  templateUrl: './toolbar-navigation-dropdown-item.component.html',
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class ToolbarNavigationDropdownItemComponent implements OnInit {
 
   @Input() item: SidenavItem;
-  @Input() currentlyOpen: SidenavItem[] = [ ];
+  @Input() currentlyOpen: SidenavItem[] = [];
 
   constructor(
     private store: Store<fromRoot.State>

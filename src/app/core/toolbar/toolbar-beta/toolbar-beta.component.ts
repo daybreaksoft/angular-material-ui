@@ -1,10 +1,11 @@
-import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output, ChangeDetectionStrategy } from '@angular/core';
 import { DefaultLayoutService, LayoutOptions } from '../../layout/layout.settings';
 
 @Component({
-  selector: 'vr-toolbar-beta',
+  selector: 'dbs-toolbar-beta',
   templateUrl: './toolbar-beta.component.html',
-  styleUrls: ['./toolbar-beta.component.scss']
+  styleUrls: ['./toolbar-beta.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class ToolbarBetaComponent implements OnInit {
 
@@ -14,12 +15,12 @@ export class ToolbarBetaComponent implements OnInit {
   @Output() toggledQuickpanel = new EventEmitter();
 
   options: LayoutOptions;
-  
+
   constructor(layout: DefaultLayoutService) {
     this.options = layout.options;
-   }
+  }
 
-  ngOnInit() {}
+  ngOnInit() { }
 
   toggleSidenav() {
     this.toggledSidenav.emit();

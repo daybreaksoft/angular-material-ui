@@ -1,10 +1,10 @@
 <mat-tab-group class="quickpanel">
   <mat-tab label="Overview">
-    <vr-scrollbar class="overflow-container">
+    <dbs-scrollbar class="overflow-container">
       <div class="overview">
         <p>TODAY</p>
         <p class="h1">
-            {{ today | date:'short' }}
+          {{ today | date:'short' }}
         </p>
       </div>
 
@@ -26,7 +26,7 @@
         </a>
         <a href="javascript:" mat-list-item>
           <h4 matLine>Deadline for Project X</h4>
-          <p  matLine>21:00 PM</p>
+          <p matLine>21:00 PM</p>
         </a>
         <mat-divider></mat-divider>
         <h3 matSubheader>TODO-List</h3>
@@ -46,21 +46,27 @@
         <h3 matSubheader>Server Statistics</h3>
         <a mat-list-item>
           <p matLine>CPU Load (71% / 100%)</p>
-          <p matLine><mat-progress-bar mode="determinate" color="primary" value="71"></mat-progress-bar></p>
+          <p matLine>
+            <mat-progress-bar mode="determinate" color="primary" value="71"></mat-progress-bar>
+          </p>
         </a>
         <a mat-list-item>
           <p matLine>RAM Usage (6,175 MB / 16,384 MB)</p>
-          <p matLine><mat-progress-bar mode="determinate" color="accent" value="34"></mat-progress-bar></p>
+          <p matLine>
+            <mat-progress-bar mode="determinate" color="accent" value="34"></mat-progress-bar>
+          </p>
         </a>
         <a mat-list-item>
           <p matLine>CPU Temp (43° / 80°)</p>
-          <p matLine><mat-progress-bar mode="determinate" color="warn" value="54"></mat-progress-bar></p>
+          <p matLine>
+            <mat-progress-bar mode="determinate" color="warn" value="54"></mat-progress-bar>
+          </p>
         </a>
       </mat-nav-list>
-    </vr-scrollbar>
+    </dbs-scrollbar>
   </mat-tab>
   <mat-tab label="Notifications">
-    <vr-scrollbar class="overflow-container">
+    <dbs-scrollbar class="overflow-container">
       <mat-nav-list>
         <h3 matSubheader>Friends</h3>
         <a href="javascript:" mat-list-item>
@@ -109,17 +115,23 @@
         <h3 matSubheader>Server Statistics</h3>
         <a mat-list-item>
           <p matLine>CPU Load (71% / 100%)</p>
-          <p matLine><mat-progress-bar mode="determinate" color="primary" value="71"></mat-progress-bar></p>
+          <p matLine>
+            <mat-progress-bar mode="determinate" color="primary" value="71"></mat-progress-bar>
+          </p>
         </a>
         <a mat-list-item>
           <p matLine>RAM Usage (6,175 MB / 16,384 MB)</p>
-          <p matLine><mat-progress-bar mode="determinate" color="accent" value="34"></mat-progress-bar></p>
+          <p matLine>
+            <mat-progress-bar mode="determinate" color="accent" value="34"></mat-progress-bar>
+          </p>
         </a>
         <a mat-list-item>
           <p matLine>CPU Temp (43° / 80°)</p>
-          <p matLine><mat-progress-bar mode="determinate" color="warn" value="54"></mat-progress-bar></p>
+          <p matLine>
+            <mat-progress-bar mode="determinate" color="warn" value="54"></mat-progress-bar>
+          </p>
         </a>
       </mat-nav-list>
-    </vr-scrollbar>
+    </dbs-scrollbar>
   </mat-tab>
 </mat-tab-group>

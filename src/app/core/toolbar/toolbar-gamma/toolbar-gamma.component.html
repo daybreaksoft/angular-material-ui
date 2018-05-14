@@ -12,22 +12,22 @@
       </a>
     </div>
 
-    <div *ngIf="options.toolbarSearch.enabled" class="search-bar" fxHide fxShow.gt-sm
-         fxLayout="row" fxLayoutAlign="start center" fxFlex="450px" fxFlexOffset.gt-sm="36px">
-      <vr-search-bar></vr-search-bar>
+    <div *ngIf="options.toolbarSearch.enabled" class="search-bar" fxHide fxShow.gt-sm fxLayout="row" fxLayoutAlign="start center"
+      fxFlex="450px" fxFlexOffset.gt-sm="36px">
+      <dbs-search-bar></dbs-search-bar>
     </div>
 
     <div fxLayout="row" fxFlexOffset.gt-sm="24px">
-        <vr-search *ngIf="options.toolbarSearch.enabled" fxShow fxHide.gt-sm></vr-search>
+      <dbs-search *ngIf="options.toolbarSearch.enabled" fxShow fxHide.gt-sm></dbs-search>
 
-        <vr-toolbar-notifications *ngIf="options.toolbarNotification.enabled"></vr-toolbar-notifications>
-  
-        <vr-toolbar-user-button *ngIf="options.toolbarUserButton.enabled"></vr-toolbar-user-button>
+      <dbs-toolbar-notifications *ngIf="options.toolbarNotification.enabled"></dbs-toolbar-notifications>
 
-      <button *ngIf="options.quickpanel.enabled" mat-button class="quickpanel-button icon-button" [class.open]="quickpanelOpen" (click)="toggleQuickpanel()">
+      <dbs-toolbar-user-button *ngIf="options.toolbarUserButton.enabled"></dbs-toolbar-user-button>
+
+      <button *ngIf="options.quickpanel.enabled" mat-button class="quickpanel-button icon-button" [class.open]="quickpanelOpen"
+        (click)="toggleQuickpanel()">
         <mat-icon class="icon">format_align_right</mat-icon>
       </button>
     </div>
   </div>
 </div>
-
