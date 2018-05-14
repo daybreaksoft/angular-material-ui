@@ -1,0 +1,143 @@
+$height__chat-header: 150px;
+$height__chat-toolbar: 64px;
+$height__chat-container: 700px;
+
+.page-chat {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  @include responsivePadding(right);
+  @include responsivePadding(bottom);
+  @include responsivePadding(left);
+
+  .chat-toolbar {
+    width: 100%;
+    border-bottom: 1px solid #EEE;
+    min-height: 64px;
+    background: #f5f5f5;
+    padding: 0 16px;
+
+    .current-contact {
+      .avatar {
+        margin: 0 14px 0 10px;
+      }
+
+      .name {
+        font-size: 18px;
+        font-weight: 500;
+      }
+
+      .status {
+        font-size: 14px;
+        color: #888;
+      }
+    }
+  }
+
+  .chat-contacts {
+    padding-top: 0;
+
+    .chat-contact {
+      position: relative;
+      cursor: pointer;
+      transition: background .1s linear;
+
+      &:hover {
+        background: #EEE;
+      }
+
+      .name {
+      }
+
+      .last-message {
+        color: #888;
+      }
+    }
+  }
+
+  .chat-inner-container {
+    height: 100%;
+
+    .chat-content {
+      position: relative;
+      background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGcAAAAXBAMAAADkTUwLAAAAHlBMVEX6+vrz8/Pu7u7s7Oz4+Pjp6en39/fo6Ojw8PDk5OSOXY9NAAACgElEQVQ4y11Ty07bQBQ9TlzLyxknNOrOj5q0u9iDCUsThMqysYHSXSALWLYEoSwD5tFtgxD93N474zzIlSUnPnPPOfcxkADsG6ACvglYv4HxEBSOZASWGumPnRyNGXAKHWGUBR/o9HfYhCngYJcyqn4Yhl0V0E/KavRgHQMJ8VpRlvoIZPtqDlzmLHQ4Q2NIWqWQMgyk8EoBp9A6hzmYey72pYD0onIuMCQi1rJToDWJY0qRYZyFE4HGKawbfpxfOH/tpqEPbTz60UNzxlodel6DEerY774JXAq06AHibIVw2VFyz0LujhMnWA8r20YK+xhukCXYiMF8REKppcQm0jpze1Tz4GWl8nFJqYZo/pnmqEMus93rCFY5xCrC8Lq4Mxb7o/4UHLanMmp5VKZtw/ezN941ZzzVT31z5iQwWf/031Z5t1BvlQ/6/XarkUrJdd/lCDwRNnPysAbY1V4O6OlhMGljo0kzxFzp+Cx/j7jMh0MfW8mqpi+14vOjzzkGsSXVFBhiRze08/i5bpDnw5GeKgRr/QVg6t1XRSBhyXCS5MzQZe8M44oRYbzxQCvCB7fMHO+tNiLb1lqENX2qIVn3flSOffAd4BrEu9FO8xqoLq4XZFIa49xtxWJT1NdJmrm7BcvsGP8cesu76gk4EODFNL2FV6a85apos3nO6gh9QWxvUoSinqZICLytfRxli+E6VWHM6Rtq3VyUT2tL/lUAj0TEZ1rry8wLzDeKbw4+JcvdY+t7gNszJrb0PJZzsrszYzwihp5GfODcKwOX3hUx7nAOuyoDQXCUsZtnAShDeu/EKpCm7Rcv+ptNegeUdzQRy4YX5DnO4R5r1qZB/gMS8nQKB9zBlQAAAABJRU5ErkJggg==') repeat;
+
+      .messages-container {
+        padding: 24px;
+
+        .chat-message {
+          padding: 24px 0;
+
+          &:last-child {
+            padding: 24px 0 0;
+          }
+
+          .message {
+            padding: 8px;
+            position: relative;
+            box-shadow: 0 0px 0px -1px rgba(0, 0, 0, .2), 0 1px 1px 0 rgba(0, 0, 0, .14), 0 1px 3px 0 rgba(0, 0, 0, .12);
+          }
+
+          .partner {
+            .message {
+              background: white;
+              margin-left: 12px;
+
+              &:after {
+                position: absolute;
+                content: "";
+                width: 0;
+                height: 0;
+                border-style: solid;
+                border-width: 0px 10px 10px 0;
+                border-color: transparent #fff transparent transparent;
+                top: 0;
+                left: -10px;
+              }
+            }
+          }
+
+          .me {
+            .message {
+              background: #E1FFC7;
+              margin-right: 12px;
+
+              &:after {
+                position: absolute;
+                content: "";
+                width: 0;
+                height: 0;
+                border-style: solid;
+                border-width: 0px 0 10px 10px;
+                border-color: transparent transparent transparent #e1ffc7;
+                top: 0;
+                right: -10px;
+              }
+            }
+          }
+        }
+      }
+
+      .chat-respond {
+        background: white;
+        width: 100%;
+        padding: 6px 24px;
+        border-top: 1px solid #EEE;
+
+        textarea {
+          resize: none;
+        }
+
+        button {
+          margin-left: 24px;
+        }
+      }
+    }
+  }
+
+  mat-drawer.mat-drawer-opened.mat-elevation-z2, mat-drawer.mat-drawer-opening.mat-elevation-z2 {
+    box-shadow: 0 3px 1px -2px rgba(0, 0, 0, .2), 0 2px 2px 0 rgba(0, 0, 0, .14), 0 1px 5px 0 rgba(0, 0, 0, .12);
+  }
+}
+
+

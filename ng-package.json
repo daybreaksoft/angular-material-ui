@@ -1,0 +1,45 @@
+{
+  "$schema": "./node_modules/ng-packagr/ng-package.schema.json",
+  "lib": {
+    "entryFile": "public_api.ts",
+    "externals": {
+      "countup.js": "countup.js",
+      "reselect": "reselect",
+      "highlight.js": "highlight.js",
+      "highlight.js/lib/languages/typescript.js": "highlight.js/lib/languages/typescript.js",
+      "highlight.js/lib/languages/xml.js": "highlight.js/lib/languages/xml.js",
+      "lodash-es/find": "lodash-es/find",
+      "lodash-es/each": "lodash-es/each",
+      "lodash-es/filter": "lodash-es/filter",
+      "smooth-scrollbar": "smooth-scrollbar",
+      "@angular/flex-layout": "@angular/flex-layout",
+      "@angular/material": "@angular/material",
+      "@ngrx/store": "@ngrx/store"
+    }
+  },
+  "whitelistedNonPeerDependencies": [
+    "agm",
+    "angular",
+    "ngrx",
+    "nguniversal",
+    "chart",
+    "core-js",
+    "countup",
+    "reselect",
+    "highlight",
+    "lodash",
+    "express",
+    "font-awesome",
+    "hammerjs",
+    "hopscotch",
+    "moment",
+    "normalize",
+    "numeral",
+    "rxjs",
+    "smooth-scrollbar",
+    "sortablejs",
+    "ts-loader",
+    "web-animations-js",
+    "zone.js"
+  ]
+}

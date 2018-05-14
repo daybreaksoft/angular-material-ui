@@ -1,0 +1,19 @@
+<div class="list">
+  <div class="list-header" fxLayout="row" fxLayoutAlign="start baseline">
+    <div class="list-name">{{ name }}</div>
+    <mat-form-field class="filter-input" floatPlaceholder="never" fxFlex>
+      <mat-icon class="filter-input-icon" matPrefix>search</mat-icon>
+      <input matInput #filter placeholder="Search&hellip;">
+    </mat-form-field>
+    <ng-content select="header"></ng-content>
+  </div>
+  <div class="card">
+    <div class="card-main">
+      <div class="loading-shade" *ngIf="isLoadingResults">
+        <mat-spinner *ngIf="isLoadingResults"></mat-spinner>
+      </div>
+      <ng-content></ng-content>
+    </div>
+    <ng-content select="footer"></ng-content>
+  </div>
+</div>
