@@ -3,7 +3,7 @@ import { Router } from '@angular/router';
 import { ROUTE_TRANSITION } from '../../../app.animation';
 
 @Component({
-  selector: 'vr-register',
+  selector: 'dbs-register',
   templateUrl: './register.component.html',
   styleUrls: ['./register.component.scss'],
   animations: [...ROUTE_TRANSITION],

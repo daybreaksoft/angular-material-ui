@@ -11,7 +11,7 @@ import 'rxjs/add/operator/takeUntil';
 import { ScrollbarService } from '../scrollbar/scrollbar.service';
 
 @Component({
-  selector: 'vr-layout',
+  selector: 'dbs-layout',
   templateUrl: './layout.component.html'
 })
 export class LayoutComponent implements OnInit, OnDestroy {

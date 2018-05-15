@@ -1,0 +1,39 @@
+<div class="dashboard-crm">
+
+  <dbs-page-header *ngIf="!hideHeader" [height]="'170px'" background="url(/assets/img/demo/headers/pattern-3.png)" [reverse]="true"></dbs-page-header>
+
+  <div class="container">
+
+    <dbs-breadcrumbs *ngIf="!hideHeader" currentPage="Dashboard - CRM" header="primary"></dbs-breadcrumbs>
+
+
+    <div fxLayout="column" fxLayout.gt-sm="row" fxLayoutAlign.gt-sm="start start" [fxLayoutGap]="layoutGap['lt-md']" [fxLayoutGap.gt-md]="layoutGap['gt-md']">
+      <div fxLayout="column" [fxLayoutGap]="layoutGap['lt-md']" [fxLayoutGap.gt-md]="layoutGap['gt-md']" [fxFlex]="flexWidth['lt-sm']"
+        [fxFlex.gt-sm]="flexWidth['gt-sm']" [fxFlex.gt-md]="flexWidth['gt-md']">
+        <div class="widget">
+          <dbs-tasks-widget></dbs-tasks-widget>
+        </div>
+        <div class="widget">
+          <dbs-usertable-widget></dbs-usertable-widget>
+        </div>
+        <div class="widget">
+          <dbs-message-widget></dbs-message-widget>
+        </div>
+      </div>
+
+      <div fxLayout="column" [fxLayoutGap]="layoutGap['lt-md']" [fxLayoutGap.gt-md]="layoutGap['gt-md']" [fxFlex]="flexWidth['lt-sm']"
+        [fxFlex.gt-sm]="flexWidth['gt-sm']" [fxFlex.gt-md]="flexWidth['gt-md']">
+        <div class="widget">
+          <dbs-meeting-widget></dbs-meeting-widget>
+        </div>
+        <div class="widget">
+          <dbs-project-widget></dbs-project-widget>
+        </div>
+        <div class="widget">
+          <dbs-market-widget></dbs-market-widget>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>

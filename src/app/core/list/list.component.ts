@@ -6,7 +6,7 @@ import 'rxjs/add/operator/distinctUntilChanged';
 import { ListColumn } from './list-column.model';
 
 @Component({
-  selector: 'vr-list',
+  selector: 'dbs-list',
   templateUrl: './list.component.html',
   encapsulation: ViewEncapsulation.None
 })

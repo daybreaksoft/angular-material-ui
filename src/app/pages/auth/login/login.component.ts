@@ -6,7 +6,7 @@ import { ROUTE_TRANSITION } from '../../../app.animation';
 import { fadeInContent } from '@angular/material';
 
 @Component({
-  selector: 'vr-login',
+  selector: 'dbs-login',
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.scss'],
   animations: [...ROUTE_TRANSITION],

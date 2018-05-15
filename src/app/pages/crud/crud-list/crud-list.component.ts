@@ -8,7 +8,7 @@ import { MessageService } from '../../../core/utils/message.service';
 import { ConfirmDialog } from '../../../core/dialog/confirm/confirm.component';
 
 @Component({
-    selector: 'vr-crud-list',
+    selector: 'dbs-crud-list',
     templateUrl: './crud-list.component.html',
     animations: [...ROUTE_TRANSITION],
     host: { '[@routeTransition]': '' }

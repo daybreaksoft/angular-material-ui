@@ -3,7 +3,7 @@ import { Router } from '@angular/router';
 import { ROUTE_TRANSITION } from '../../../app.animation';
 
 @Component({
-  selector: 'vr-forgot-password',
+  selector: 'dbs-forgot-password',
   templateUrl: './forgot-password.component.html',
   styleUrls: ['./forgot-password.component.scss'],
   animations: [...ROUTE_TRANSITION],

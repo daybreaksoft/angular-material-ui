@@ -3,7 +3,7 @@ import * as CountUp from 'countup.js';
 import { isPlatformBrowser } from '@angular/common';
 
 @Directive({
-  selector: '[dbs-countUp]'
+  selector: '[dbs-count-up]'
 })
 export class CountUpDirective implements OnInit {
 
@@ -12,7 +12,7 @@ export class CountUpDirective implements OnInit {
    * Optional extra configuration, such as easing.
    */
   // noinspection TsLint
-  @Input('dbs-countUp') options: any;
+  @Input('dbs-count-up') options: any;
 
   /**
    * Optional start value for the count. Defaults to zero.
