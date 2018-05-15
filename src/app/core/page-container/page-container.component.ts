@@ -1,4 +1,4 @@
-import { Component, Input, OnInit, ChangeDetectorRef } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
     selector: 'dbs-page-container',
@@ -6,23 +6,9 @@ import { Component, Input, OnInit, ChangeDetectorRef } from '@angular/core';
 })
 export class PageContainerComponent implements OnInit {
 
-    _pageName: string;
+    @Input() pageName: string;
 
-    @Input()
-    set pageName(val) {
-        if (this._pageName !== val) {
-            console.log('changed');
-            this.cd.markForCheck();
-        }
-        this._pageName = val;
-    }
-
-    get pageName() {
-        return this._pageName;
-    }
-
-
-    constructor(private cd: ChangeDetectorRef) {
+    constructor() {
     }
 
     ngOnInit() {
